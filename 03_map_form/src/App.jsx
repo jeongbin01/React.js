@@ -8,6 +8,7 @@ import { Lad6 } from './components/Lad6'
 import Movie from './components/Movie'
 import { dumy } from './Dumy'
 import './App.css'
+import Register from './components/Register'
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
       })
     }
     </div>
+
+    <Register />
     </>
   )
 }

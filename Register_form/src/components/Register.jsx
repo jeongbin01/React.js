@@ -11,127 +11,110 @@
 
 import React, { useState } from 'react'
 
-export const Register = () => {
-    const [name, setName] = useState("이름");
-    const [id, setId] = useState("아이디");
-    const [password, setPassword] = useState("비밀번호");
-    const [address, setAddress] = useState("주소");
-    const [bio, setBio] = useState("자기소개");
-    const [birth, setBirth] = useState("생일");
-    const [phone, setPhone] = useState("전화번호");
-    const [email, setEmail] = useState("이메일주소");
+const Register = () => {
+  const [name, setName] = useState('');
+  const [userId, setUserId] = useState('');
+  const [password, setPassword] = useState('');
+  const [address, setAddress] = useState('');
+  const [bio, setBio] = useState('');
+  const [birth, setBirth] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
 
-    function onChangeName(e) {
-        setName(e.target.value);
-    }
+  const handleSubmit = () => {
+    console.log({ name, userId, password, address, bio, birth, phone, email });
+    // 실제 가입 처리 로직은 여기!
+  };
 
-    function onChangeId(e) {
-        setId(e.target.value);
-    }
+  return (
+    <div className="register-form">
+      <h1>회원가입 폼 처리</h1>
+      <hr />
 
-    function onChangePassword(e) {
-        setPassword(e.target.value);
-    }
+      <div className="input-name">
+        <h3>이름</h3>
+        <input
+          type="text"
+          placeholder="이름"
+          value={name}
+          onChange={e => setName(e.target.value)}
+        />
+      </div>
 
-    function onChangeAddress(e) {
-        setAddress(e.target.value);
-    }
+      <div className="input-id">
+        <h3>아이디</h3>
+        <input
+          type="text"
+          placeholder="아이디"
+          value={userId}
+          onChange={e => setUserId(e.target.value)}
+        />
+      </div>
 
-    function onChangeBio(e) {
-        setBio(e.target.value);
-    }
+      <div className="input-password">
+        <h3>비밀번호</h3>
+        <input
+          type="password"
+          placeholder="비밀번호"
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+        />
+      </div>
 
-    function onChangeBirth(e) {
-        setBirth(e.target.value);
-    }
+      <div className="input-address">
+        <h3>주소</h3>
+        <input
+          type="text"
+          placeholder="주소"
+          value={address}
+          onChange={e => setAddress(e.target.value)}
+        />
+      </div>
 
-    function onChangePhone(e) {
-        setPhone(e.target.value);
-    }
+      <div className="input-bio">
+        <h3>자기소개</h3>
+        <textarea
+          placeholder="자기소개"
+          value={bio}
+          onChange={e => setBio(e.target.value)}
+          rows={4}
+        />
+      </div>
 
-    function onChangeEmail(e) {
-        setEmail(e.target.value);
-    } 
+      <div className="input-birth">
+        <h3>생일</h3>
+        <input
+          type="date"
+          value={birth}
+          onChange={e => setBirth(e.target.value)}
+        />
+      </div>
 
-    return (
-        <div className='register-form'>
-            <h1>회원가입 폼 처리</h1>
-            <hr />
-            <div className='input-name'>
-                <h3>이름</h3>
-                <input
-                    type="text"
-                    placeholder="이름"
-                    value={name}
-                    onChange={onChangeName}
-                />
-            </div>
-            <div className='input-id'>
-                <h3>아이디</h3>
-                <input
-                    type="text"
-                    placeholder="아이디"
-                    value={id}
-                    onChange={onChangeId}
-                />
-            </div>
-            <div className='input-password'>
-                <h3>비밀번호</h3>
-                <input
-                    type="password"
-                    placeholder="비밀번호"
-                    value={password}
-                    onChange={onChangePassword}
-                />
-            </div>
-            <div className='input-address'>
-                <h3>주소</h3>
-                <input
-                    type="text"
-                    placeholder="주소"
-                    value={address}
-                    onChange={onChangeAddress}
-                />
-            </div>
-            <div className='input-bio'>
-                <h3>자기소개</h3>
-                <input
-                    type="text"
-                    placeholder="자기소개"
-                    value={bio}
-                    onChange={onChangeBio}
-                />
-            </div>
-            <div className='input-birth'>
-                <h3>생일</h3>
-                <input
-                    type="date"
-                    value={birth}
-                    onChange={onChangeBirth}
-                />
-            </div>
-            <div className='input-phone'>
-                <h3>전화번호</h3>
-                <input
-                    type="text"
-                    placeholder="전화번호"
-                    value={phone}
-                    onChange={onChangePhone}
-                />
-            </div>
-            <div className='input-email'>
-                <h3>이메일주소</h3>
-                <input
-                    type="email"
-                    placeholder="이메일주소"
-                    value={email}
-                    onChange={onChangeEmail}
-                />
-            </div>
-            <button onClick={() => {
-                console.log(name, id, password, address, bio, birth, phone, email)}}
-            >가입하기
-            </button>
-        </div>
-    )
-}
+      <div className="input-phone">
+        <h3>전화번호</h3>
+        <input
+          type="text"
+          placeholder="010-0000-0000"
+          value={phone}
+          onChange={e => setPhone(e.target.value)}
+        />
+      </div>
+
+      <div className="input-email">
+        <h3>이메일 주소</h3>
+        <input
+          type="email"
+          placeholder="example@example.com"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+        />
+      </div>
+
+      <button type="button" onClick={handleSubmit}>
+        가입하기
+      </button>
+    </div>
+  );
+};
+
+export default Register

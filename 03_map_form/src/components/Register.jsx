@@ -19,8 +19,8 @@ const [bio, setBio] = useState("");
 // JavaScript 에서 함수를 3가지 방법으로 생성 할 수 있다.  ES6 (2015) <== 많은 변화. 
 // 1. 순수 함수 선언  : 1. 함수 선언식 (Function Declaration)
 function onChangeName (e) {
-    console.log("이름 호출됨");
-    console.log(e);
+    // console.log("이름 호출됨");
+    // console.log(e);
     setName(e.target.value);
     
     

@@ -1,0 +1,41 @@
+.app-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.movie-container {
+  width: 350px;
+  box-sizing: border-box;          
+  border-radius: 5px;
+  box-shadow: 3px 6px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;       
+}
+.movie-container:hover {
+  transform: translateY(-5px);
+}
+
+.movie-container img {
+  width: 100%;
+  display: block;                  
+}
+
+.movie-info {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-info h4 {
+  margin: 0;
+}
+
+
+.movie-info span {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #f1c40f;
+  font-weight: bold;
+}

@@ -26,7 +26,8 @@ const Register2 = () => {
 
 const onChange = e => {
   // console.log(e);
-  // console.log(e.target.name + " : " + e.target.value);
+  // 
+  console.log(e.target.name + " : " + e.target.value);
 
   setInput({
     ...input,
@@ -98,7 +99,7 @@ const onChange = e => {
           name="bio"
           value={bio}
           onChange={onChange}
-          placeholder="자기소개를 입력 하세요"
+          placeholder=""
         />
       </div>
       <button

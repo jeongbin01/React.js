@@ -11,7 +11,7 @@ import { useState } from "react"
 
 const Register = () => {
 // 상태(state, 값) 선언, 상태가 변경되면 자동으로 JSX가 랜더링됨  
-const [name, setName] = useState("이름"); 
+const [name, setName] = useState(""); 
 const [birth, setBirth] = useState(""); 
 const [country, setCountry] = useState(""); 
 const [bio, setBio] = useState(""); 

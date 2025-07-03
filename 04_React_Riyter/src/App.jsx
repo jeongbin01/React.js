@@ -19,10 +19,8 @@
 
 */
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Router } from "./route/Router";
-import { useNavigate } from "react-router-dom";
-
 
 function App() {
   // useNavigate() 혹 사용
@@ -30,7 +28,7 @@ function App() {
 
   return (
     <>
-    <h1>React Ruyter</h1>
+      <h1>React Ruyter</h1>
       <hr />
       <nav>
         <ul>
@@ -39,6 +37,7 @@ function App() {
           <li><Link to="/Company">Company</Link></li>
           <li><Link to="/Gallery">Gallery</Link></li>
           <li><Link to="/Footer">Footer</Link></li>
+          <li> <Link to = "/edit2?id=200&mode=abc"> Edit2 : Query String  예제 </Link></li>
           <li>==========useNavigate()를 이용한 이벤트 이동==========</li>
           <li>
             <button onClick={() => navigate("/Home")}>홈으로 이동</button>
@@ -57,7 +56,7 @@ function App() {
           </li>
         </ul>
       </nav>
-      <Router></Router>  
+      <Router />
     </>
   );
 }
